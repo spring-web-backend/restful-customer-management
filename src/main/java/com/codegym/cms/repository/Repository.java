@@ -1,10 +1,8 @@
 package com.codegym.cms.repository;
 
-import com.codegym.cms.model.Customer;
-
 import java.util.List;
 
-public interface Repository<T> {
+public interface Repository <T> {
     List<T> findAll();
 
     T findById(Long id);
@@ -13,4 +11,3 @@ public interface Repository<T> {
 
     void remove(Long id);
 }
-
