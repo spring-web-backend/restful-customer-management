@@ -1,13 +1,16 @@
 package com.codegym.cms.repository;
 
 import com.codegym.cms.model.Customer;
+import com.codegym.cms.repository.CustomerRepository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
+import javax.transaction.Transactional;
 import java.util.List;
 
+@Transactional
 public class CustomerRepositoryImpl implements CustomerRepository {
 
     @PersistenceContext
@@ -47,4 +50,3 @@ public class CustomerRepositoryImpl implements CustomerRepository {
         }
     }
 }
-
